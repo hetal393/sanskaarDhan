@@ -1,0 +1,15 @@
+#showList {
+    display: none;
+}
+
+#showList:target {
+    display: block;
+}
+
+#addCountry {
+    display: none;
+}
+
+#addCountry:target {
+    display: block;
+}
