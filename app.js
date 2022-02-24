@@ -41,12 +41,19 @@ app.use(expressValidator());
 
 //route prefix
 const countryRoutes = require('./routes/countries');
+const vicharanRoutes = require('./routes/vicharans');
 app.use("", countryRoutes);
+app.use("", vicharanRoutes);
 
 
 // // Set EJS as templating engine 
 app.set("view engine", "ejs");
+app.use(express.static('./public/css'));
 app.use(express.static('./public/img'));
+app.use(express.static('./public/js'));
+app.use(express.static('./public/lib'));
+app.use(express.static('./public/scss'));
+
 
 
 

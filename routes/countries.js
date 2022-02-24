@@ -1,5 +1,6 @@
 const express = require('express');
 const countryController = require('../controllers/country');
+const queryController = require('../controllers/query');
 const validator = require('../validators');
 const Country = require("../models/country");
 const multer = require('multer');
@@ -19,7 +20,18 @@ var upload = multer({
 }).single("image");
 
 router.post('/addCountry', upload, validator.createCountryValidator, countryController.createCountry);
+
+router.post('/contact', validator.createQueryValidator, queryController.createQuery);
+
+
 router.get('/addCountry', (req,res) =>{ res.render('addCountry'); });
+
+router.get('/about-us', (req,res) =>{ res.render('about-us'); });
+router.get('/activities', (req,res) =>{ res.render('activities'); });
+router.get('/contact', (req,res) =>{ res.render('contact'); });
+router.get('/guru-details', (req,res) =>{ res.render('guru-details'); });
+router.get('/prabhushriji', (req,res) =>{ res.render('prabhushriji'); });
+router.get('/brahmachariji', (req,res) =>{ res.render('brahmachariji'); });
 
 router.get("/", (req, res) =>{
 	Country.find().exec((err, countries) =>{
