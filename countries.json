@@ -1,0 +1,73 @@
+[{
+  "_id": {
+    "$oid": "61a6662954f470c0710ea7be"
+  },
+  "name": "Australia",
+  "continent": "Oceania",
+  "rank": 2,
+  "flag": "undefined1638295081012australia.png",
+  "created": {
+    "$date": "2021-11-30T17:58:01.028Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61a6682a54f470c0710ea7c0"
+  },
+  "name": "South Africa",
+  "continent": "Africa",
+  "rank": 4,
+  "flag": "undefined1638295594182southafrica.png",
+  "created": {
+    "$date": "2021-11-30T18:06:34.187Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61a668cd54f470c0710ea7c2"
+  },
+  "name": "England",
+  "continent": "Europe",
+  "rank": 3,
+  "flag": "undefined1638295757153england.png",
+  "created": {
+    "$date": "2021-11-30T18:09:17.156Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61a67c4cb7590eb788e5f499"
+  },
+  "name": "India",
+  "continent": "Asia",
+  "rank": 1,
+  "flag": "undefined1638300748923india.png",
+  "created": {
+    "$date": "2021-11-30T19:32:28.937Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61a67ce6b7590eb788e5f4a0"
+  },
+  "name": "Pakistan",
+  "continent": "Asia",
+  "rank": 5,
+  "flag": "undefined1638300902788pakistan.png",
+  "created": {
+    "$date": "2021-11-30T19:35:02.793Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61a680c6b7590eb788e5f4a9"
+  },
+  "name": "New Zealand",
+  "continent": "Oceania",
+  "rank": 7,
+  "flag": "undefined1638301894802newzealand.png",
+  "created": {
+    "$date": "2021-11-30T19:51:34.807Z"
+  },
+  "__v": 0
+}]
