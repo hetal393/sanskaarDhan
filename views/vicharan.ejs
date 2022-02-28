@@ -10,12 +10,14 @@
             <% if (vicharans != '') { %>
             <% vicharans.forEach((vicharan) => { %>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="hover-container position-relative text-center">
-                    <img class="hover-image img-fluid rounded" src="<%= vicharan.photo %>" alt="">
-                    <div class="middle">
-                        <span class="hover-text d-block text-center h4 mt-3 mb-4"><%= vicharan.title%></span>
+                <a href="/vicharanDetails/<%= vicharan.title %>">
+                    <div class="hover-container position-relative text-center">
+                        <img class="hover-image img-fluid rounded" src="<%= vicharan.photo %>" alt="">
+                        <div class="middle">
+                            <span class="hover-text d-block text-center h4 mt-3 mb-4"><%= vicharan.title%></span>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <% }) %>
             <% } else { %>

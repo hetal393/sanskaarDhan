@@ -10,7 +10,7 @@ var storage = multer.diskStorage({
 	destination: function(req, file, cb){
 		cb(null, './public/img');
 	}, filename: function(req, file, cb){
-		cb(null, file.filename+""+Date.now()+""+file.originalname);
+		cb(null, file.originalname);
 	},
 });
 
@@ -18,19 +18,12 @@ var upload = multer({
 	storage: storage,
 }).single("photo");
 
-// router.get('/vicharan', (req,res) =>{ res.render('vicharan'); });
+
 router.post('/addVicharan', upload, vicharanController.createVicharan);
 
 
-router.get("/vicharan", (req, res) =>{
-	Vicharan.find().exec((err, vicharans) =>{
-		if(err){
-			res.json({message:err.message});
-		} else{
-			res.render('vicharan', {vicharans:vicharans});
-		}
-	})
-});
+router.get("/vicharan", vicharanController.getVicharans);
+router.get('/vicharanDetails/:title', vicharanController.getVicharanByTitle);
 
 
 module.exports = router;

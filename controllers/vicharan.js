@@ -6,34 +6,36 @@ exports.getVicharans = (req, res) => {
 	
 	const vicharans = Vicharan.find()
 	.then(vicharans => {
-		//res.json({countries:countries});
 		res.render('vicharan', {vicharans:vicharans});
 	})
 
 	.catch(err => {console.log(err)});
 };
 
-// exports.getCountryById = (req, res) =>{
-// 	let id = req.params.id;
-// 	Country.findById(id, (err, country)=>{
-// 		if (err){
-// 			res.redirect("/");
-// 		} else {
-// 			if (country == null){
-// 				res.redirect("/");
-// 			} else{
-// 				res.render('viewCountryDetails', {
-// 					country: country
-// 				});
-// 			}
-// 		}
-// 	});
-// };
+exports.getVicharanByTitle = (req, res) =>{
+	let getTitle = req.params.title;
+	Vicharan.find({title:getTitle}, (err, vicharan)=>{
+		let data = vicharan[0];
+		if (err){
+			res.redirect("vicharan");
+		} else {
+			if (data == null){
+				res.redirect("vicharan");
+			} else{
+				res.render('vicharanDetails', {vicharanData:data});
+			}
+		}
+	});
+};
 
 exports.createVicharan = (req, res) =>{
 	const vicharan = new Vicharan({
 		title: req.body.title,
-		photo: req.file.filename
+		photo: req.file.filename,
+		contact_number: req.body.contact_number,
+		contact_name: req.body.contact_name,
+		facilities: req.body.facilities,
+		distance:req.body.distance
 	});
 	vicharan.save((err) =>{
 		if(err){
@@ -43,7 +45,7 @@ exports.createVicharan = (req, res) =>{
 				type : 'success',
 				message: 'Vicharan added Successfully !'
 			};
-			res.redirect('/vicharan');
+			res.redirect('vicharan');
 		}
 	});
 };

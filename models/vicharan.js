@@ -9,6 +9,21 @@ const vicharanSchema = new mongoose.Schema({
 		type: String,
 		required: true
 	},
+	contact_number:Array,
+	contact_name:{
+		type: String	
+	},
+	facilities:{
+		stay:{
+			type: String
+		},
+		food:{
+			type: String
+		}
+	},
+	distance: {
+		type: String
+	},
 	created:{
 		type: Date,
 		required: true,
