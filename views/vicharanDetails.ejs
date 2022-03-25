@@ -1,16 +1,58 @@
 <%- include('layouts/header') %>
 
 <!-- Vicharan Details Start -->
-<div class="container-xxl py-5">
+<div class="container-xxl py-5" onload="setRandomColor()">
+    <script type="text/javascript">        
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    function setRandomColor() {
+        console.log("hello");
+        //document.getElementById("colorpad").style.background-color = getRandomColor();
+    }
+    </script>
     <div class="container" style="border: 6px solid coral;border-radius: 15px;background-color: lightyellow;">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
             <h1 class="mb-3"><%= (vicharanData.title).toUpperCase() %></h1>
         </div>
-        <div class="row justify-content-md-center g-4">
-            <div class="col-lg-10 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="row g-4">
+            <div class="col-lg-8 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="position-relative">
                     <img class="img-fluid center-block rounded" src="/<%= vicharanData.photo %>" alt="" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
                 </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp table-responsive" data-wow-delay="0.1s">
+                <table class="table table-bordered text-center">
+                    <thead>
+                        <tr>
+                            <th id="colorpad"><h3 style="color:orchid;">Ashram Timings</h3></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><h5 style="color:orchid;">04:00 AM - 09:00 PM</h5></td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th id="colorpad"><h3 style="color:orchid;">Facilities Available</h3></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><h5 style="color:orchid;">Stay&nbsp;&nbsp;<span>&#10003;</span></h5></td>
+                        </tr>
+                        <tr>
+                            <td><h5 style="color:orchid;">Food&nbsp;&nbsp;<span>&#10003;</span></h5></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
@@ -85,6 +127,12 @@
 
           <!-- Expanded image -->
           <img class="img-fluid center-block rounded" id="expandedImg" style="width: -webkit-fill-available;margin-bottom: 10px;">
+          <p style="font-family: cursive;color: #e91e63;">
+                This Guru Madir is made by Mumukshus and not by Laborers.<br>
+                Pran Pratistha was done by P.P. Prabhushriji and after completion of Pratistha, Prabhushriji embrassed the idol of Param Krupaludev and said that "Now Anjan-shalaka" has happened.<br>
+                Anyone attaining Samyak Darshan (Self realization) – this idol will play a role for that soul.<br>
+                On one side of this idol is Lotusfeet of Param Krupaludev and other side Omkaarji.
+          </p>
         </div>
 
     </div>
@@ -102,7 +150,8 @@
       
       // Show the container element (hidden with CSS)
       expandImg.parentElement.style.display = "block";
-}
+      document.getElementById("expandedImg").scrollIntoView(); //to set focus on expanded image
+    }
 </script>
 
 <%- include('layouts/footer') %>

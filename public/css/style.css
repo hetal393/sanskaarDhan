@@ -553,3 +553,10 @@ h6,
     padding-right: 0;
     border-right: none;
 }
+
+/*@media for tablet view*/
+
+@media screen and (max-width: 1024px) and (min-width: 992px)
+{
+    
+}
