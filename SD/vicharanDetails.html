@@ -1,0 +1,157 @@
+<%- include('layouts/header') %>
+
+<!-- Vicharan Details Start -->
+<div class="container-xxl py-5" onload="setRandomColor()">
+    <script type="text/javascript">        
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    function setRandomColor() {
+        console.log("hello");
+        //document.getElementById("colorpad").style.background-color = getRandomColor();
+    }
+    </script>
+    <div class="container" style="border: 6px solid coral;border-radius: 15px;background-color: lightyellow;">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 class="mb-3"><%= (vicharanData.title).toUpperCase() %></h1>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-8 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="position-relative">
+                    <img class="img-fluid center-block rounded" src="/<%= vicharanData.photo %>" alt="" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp table-responsive" data-wow-delay="0.1s">
+                <table class="table table-bordered text-center">
+                    <thead>
+                        <tr>
+                            <th id="colorpad"><h3 style="color:orchid;">Ashram Timings</h3></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><h5 style="color:orchid;">04:00 AM - 09:00 PM</h5></td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th id="colorpad"><h3 style="color:orchid;">Facilities Available</h3></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><h5 style="color:orchid;">Stay&nbsp;&nbsp;<span>&#10003;</span></h5></td>
+                        </tr>
+                        <tr>
+                            <td><h5 style="color:orchid;">Food&nbsp;&nbsp;<span>&#10003;</span></h5></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row justify-content-md-center g-4">
+            <div class="col-lg-10 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="h-100 d-flex flex-column justify-content-center">
+                    <h2><br>Shri Sanatan Jain Dharma Shrimad Rajchandra Ashram</h2>
+                    <h5>The Ashram is established by Pujya Shri Laghurajswami (P.P. Prabhushriji) in Vikram Era 1976</h5>
+                    <p>Age: More than 100 years ago. Shrimad Rajchandraji himself had forecasted that this will be a Punya Bhumi.<br>
+                    P.P. Prabushriji was endorsed by Shrimad as a True Gyaani. Shrimad handed over to P.P. Prabhushriji for enforcement of a True religion and then P.P. Prabhushriji handed it over to P. Bramhchariji. Thereafter, no further handover has been seen, as this place is reserved only for Aatmagyaani.<br>
+                    But both Prabhushriji and P. Bramhchariji never considered them as a Guru but endorsed Shrimadji as Our Only Guru.<br><br>
+                    <span style="font-family:Comic Sans MS, sans-serif; font-weight:580; line-height:1.5; color:yellowgreen;font-size:25px;">Motto of this Ashram to get burn the seed of all the sorrows majorly birth and death cycle.</span>
+                    </p>
+                    <h2><br>Uniqueness of the Ashram</h2>
+                    <p>Despite no Physical Pratyaksh Guru but what is definitely present here is Aagya of a Pratyaksh True Guru.<br>
+                    The whole Aaradhna Kram of more than 10 hours is designed by P.P. Prabhushriji. There has mainly been no change in the kram since more than 100 years.<br>
+                    The “Pratishta” of this Ashram was done under the supervision of P.P. Prabhushriji.<br>
+                    The Aaradhna Kram comprises of Devotional Bhakti, Taatvik Bhakti, Aalochana / Pratikraman, Various Holy Bhaavnas, Satsang etc. This is the Agya Kram given by Gyani.<br>
+                    The Ashram has a huge library of Religious Books.<br>
+                    Prabhushriji himself said that this place is a strongest reason for Samadhi Maran. He has set a 36 Maala Aaradhna Kram for Samadhi Maran which is a sure shot reason for the Samadhi Maran.
+                    </p>
+                    <h2><br>Facilities:</h2>
+                    <p><span style="font-size: 18px;color:hotpink;"><b><u>Stay:</u></b></span> A huge dharmshaala having rooms with essential amenities.<br>
+                    <span style="font-size: 18px;color:hotpink;"><b><u>Food:</u></b></span> A huge Bhojanshala which provides food to each and everyone coming inside the ashram
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-md-center g-4">
+            <div class="col-lg-10 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
+                <h2>Ashram Darshan</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img class="img-fluid rounded fitImageEqually" src="/a1.jpg" onclick="expandImage(this);">
+            </div>
+            <div class="column">
+                <img class="img-fluid rounded fitImageEqually" src="/a2.jpg" onclick="expandImage(this);">
+            </div>
+            <div class="column">
+                <img class="img-fluid rounded fitImageEqually" src="/a3.jpg" onclick="expandImage(this);">
+            </div>
+            <div class="column">
+                <img class="img-fluid rounded fitImageEqually" src="/a4.jpg" onclick="expandImage(this);">
+            </div>
+            <div class="column">
+                <img class="img-fluid rounded fitImageEqually" src="/a5.jpg" onclick="expandImage(this);">
+            </div>
+            <div class="column">
+                <img class="img-fluid rounded fitImageEqually" src="/a6.jpg" onclick="expandImage(this);">
+            </div>
+            <div class="column">
+                <img class="img-fluid rounded fitImageEqually" src="/a7.jpg" onclick="expandImage(this);">
+            </div>
+            <div class="column">
+                <img class="img-fluid rounded fitImageEqually" src="/a8.jpg" onclick="expandImage(this);">
+            </div>
+            <div class="column">
+                <img class="img-fluid rounded fitImageEqually" src="/a9.jpg" onclick="expandImage(this);">
+            </div>
+            <div class="column">
+                <img class="img-fluid rounded fitImageEqually" src="/a10.jpg" onclick="expandImage(this);">
+            </div>
+        </div>
+
+        <!-- The expanding image container -->
+        <div class="imageContainer">
+          <!-- Close the image -->
+          <span style="color: black;" onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+          <!-- Expanded image -->
+          <img class="img-fluid center-block rounded" id="expandedImg" style="width: -webkit-fill-available;margin-bottom: 10px;">
+          <p style="font-family: cursive;color: #e91e63;">
+                This Guru Madir is made by Mumukshus and not by Laborers.<br>
+                Pran Pratistha was done by P.P. Prabhushriji and after completion of Pratistha, Prabhushriji embrassed the idol of Param Krupaludev and said that "Now Anjan-shalaka" has happened.<br>
+                Anyone attaining Samyak Darshan (Self realization) – this idol will play a role for that soul.<br>
+                On one side of this idol is Lotusfeet of Param Krupaludev and other side Omkaarji.
+          </p>
+        </div>
+
+    </div>
+</div>
+<!-- Vicharan Details End -->
+
+<script type="text/javascript">
+    //image expander in vicharanDetails
+    function expandImage(imgs) {
+      // Get the expanded image
+      var expandImg = document.getElementById("expandedImg");
+      
+      // Use the same src in the expanded image as the image being clicked on from the grid
+      expandImg.src = imgs.src;
+      
+      // Show the container element (hidden with CSS)
+      expandImg.parentElement.style.display = "block";
+      document.getElementById("expandedImg").scrollIntoView(); //to set focus on expanded image
+    }
+</script>
+
+<%- include('layouts/footer') %>
