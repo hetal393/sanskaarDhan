@@ -4,6 +4,11 @@
     // Initiate the wowjs
     new WOW().init();
 
+    //load content from top on every refresh
+    $(document).ready(function(){
+        $(this).scrollTop(0);
+    });
+
 
     // Spinner
     var spinner = function () {
