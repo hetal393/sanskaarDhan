@@ -27,12 +27,12 @@
     position: relative;
     width: 100%;
     /*min-height: calc(100vh - 84.391px);*/
-    height: 85vh;
+    /* height: 85vh; */
     border: 5px solid black;
     background: url("../img/homePageImg.png") center top no-repeat;
     background-size: cover;
-    overflow-x: hidden;
-    margin-bottom: 30px;
+    /* overflow-x: hidden; */
+    /* margin-bottom: 30px; */
 }
 .left{
     position: absolute;
@@ -59,21 +59,26 @@
     z-index: 99;
 }
 
+#main_bg_image {
+    height: auto;
+    width: 100%;
+}
+
 /*////////////////////////////////////////////////////////////*/
 
 #scene {
     position: relative;
     width: 100%;
-    min-height: calc(100vh - 84.391px);
+    /* min-height: calc(100vh - 84.391px); */
     /*height: 85vh;*/
     /*border: 5px solid black;*/
     background: url("../img/homePageImg.png") center top no-repeat;
     background-size: cover;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 #curtain {
   width: 100%;
-  min-height: calc(100vh - 84.391px);
+  /* min-height: calc(100vh - 84.391px); */
   overflow: hidden;
   background: transparent;
 }
@@ -83,7 +88,8 @@
   position: absolute;
   top: 0;
   width: 50%;
-  min-height: calc(100vh - 84.391px);
+  /* min-height: calc(100vh - 84.391px); */
+  height: 100%;
   filter: brightness(180%);
   background-image: url("../img/curtain.svg");
   background-size: cover;
@@ -120,7 +126,7 @@
 #curtain.open .leftc {
   animation-fill-mode: forwards;
   animation-name: curtain-opening, left-curtain-opening;
-  animation-duration: 2s, 4s;
+  animation-duration: 0s, 3s;
   animation-timing-function: ease-in-out, ease-in-out;
   animation-delay: 0s, 0s;
   animation-iteration-count: 1, 1;
@@ -129,7 +135,7 @@
 #curtain.open .rightc {
   animation-fill-mode: forwards;
   animation-name: curtain-opening, right-curtain-opening;
-  animation-duration: 2s, 4s;
+  animation-duration: 0s, 3s;
   animation-timing-function: ease-in-out, ease-in-out;
   animation-delay: 0s, 0s;
   animation-iteration-count: 1, 1;
@@ -152,12 +158,12 @@
 
 @keyframes left-curtain-opening { /* 4s */ 
   from { transform: translate(0) rotate(0) scale(1,1); }
-  to { transform: translate(-100%) rotate(20deg) scale(0,1.2); }
+  to { transform: translate(-100%) rotate(2deg) scale(0,1); }
 }
 
 @keyframes right-curtain-opening { /* 4s */
   from { transform: translate(0) rotate(0) scale(1,1); }
-  to { transform: translate(100%) rotate(-20deg) scale(0,1.2); }
+  to { transform: translate(100%) rotate(-2deg) scale(0,1); }
 }
 
 
@@ -961,6 +967,10 @@ h6,
     -ms-flex: 100%;
     flex: 100%;
     max-width: 100%;
+  }
+
+  #scene {
+    height: 42vh;
   }
 }
 
