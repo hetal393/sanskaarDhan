@@ -74,6 +74,7 @@
     /*border: 5px solid black;*/
     background: url("../img/homePageImg.png") center top no-repeat;
     background-size: cover;
+    overflow: hidden;
     /* margin-bottom: 30px; */
 }
 #curtain {
