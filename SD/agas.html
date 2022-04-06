@@ -16,6 +16,9 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
+        <!-- Fancy Box stylesheet -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+
         <!-- Libraries Stylesheet -->
         <link href="lib/animate/animate.min.css" rel="stylesheet">
         <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -150,98 +153,104 @@
                     </div>
                 </div>
 
-                <div class="row justify-content-md-center g-4">
-                    <div class="col-lg-10 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
-                        <h2>Ashram Darshan</h2>
-                    </div>
-                </div>
-                <div class="row" style="display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  padding: 0 4px;">
-                    <div class="column-img" style="-ms-flex: 25%; /* IE10 */
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;">
-                        <img src="img/a1.jpg" style="width:100%" style="margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;">
-                        <img src="img/a2.jpg" style="width:100%" style="margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;">
-                        <img src="img/a3.jpg" style="width:100%" style="margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;">
-                        <img src="img/a4.jpg" style="width:100%" style="margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;">
-                        <img src="img/a5.jpg" style="width:100%" style="margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;">
-                        <img src="img/a6.jpg" style="width:100%" style="margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;">
-                        <img src="img/a7.jpg" style="width:100%" style="margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;">
-                        <img src="img/a8.jpg" style="width:100%" style="margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;">
-                        <img src="img/a9.jpg" style="width:100%" style="margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;">
-                        <img src="img/a10.jpg" style="width:100%" style="margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;">
-                    </div>
-                </div>
-                <!-- <div class="row">
-                    <div class="column">
-                        <img class="img-fluid rounded fitImageEqually" src="img/a1.jpg" onclick="expandImage(this);">
-                    </div>
-                    <div class="column">
-                        <img class="img-fluid rounded fitImageEqually" src="img/a2.jpg" onclick="expandImage(this);">
-                    </div>
-                    <div class="column">
-                        <img class="img-fluid rounded fitImageEqually" src="img/a3.jpg" onclick="expandImage(this);">
-                    </div>
-                    <div class="column">
-                        <img class="img-fluid rounded fitImageEqually" src="img/a4.jpg" onclick="expandImage(this);">
-                    </div>
-                    <div class="column">
-                        <img class="img-fluid rounded fitImageEqually" src="img/a5.jpg" onclick="expandImage(this);">
-                    </div>
-                    <div class="column">
-                        <img class="img-fluid rounded fitImageEqually" src="img/a6.jpg" onclick="expandImage(this);">
-                    </div>
-                    <div class="column">
-                        <img class="img-fluid rounded fitImageEqually" src="img/a7.jpg" onclick="expandImage(this);">
-                    </div>
-                    <div class="column">
-                        <img class="img-fluid rounded fitImageEqually" src="img/a8.jpg" onclick="expandImage(this);">
-                    </div>
-                    <div class="column">
-                        <img class="img-fluid rounded fitImageEqually" src="img/a9.jpg" onclick="expandImage(this);">
-                    </div>
-                    <div class="column">
-                        <img class="img-fluid rounded fitImageEqually" src="img/a10.jpg" onclick="expandImage(this);">
-                    </div>
-                </div> -->
+                <!-- fancy box start -->
 
-                <!-- The expanding image container -->
-                <div class="imageContainer">
-                  <!-- Close the image -->
-                  <span style="color: black;" onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <div class="mt-12 mb-8 px-6 text-center text-lg md:text-2xl font-semibold">
+                    <h1>Ashram Darshan</h1>
+                </div>
 
-                  <!-- Expanded image -->
-                  <img class="img-fluid center-block rounded" id="expandedImg" style="width: -webkit-fill-available;margin-bottom: 10px;">
-                  <p style="font-family: cursive;color: #e91e63;">
-                        This Guru Madir is made by Mumukshus and not by Laborers.<br>
-                        Pran Pratistha was done by P.P. Prabhushriji and after completion of Pratistha, Prabhushriji embrassed the idol of Param Krupaludev and said that "Now Anjan-shalaka" has happened.<br>
-                        Anyone attaining Samyak Darshan (Self realization) – this idol will play a role for that soul.<br>
-                        On one side of this idol is Lotusfeet of Param Krupaludev and other side Omkaarji.
-                  </p>
+                <div class="align-img flex flex-wrap gap-5 justify-center max-w-5xl mx-auto px-6">
+                  <a
+                    data-caption="Entrance gate engraved with <span>&#8220;</span>क्षमा ए ज मोक्ष नु भव्य दरवाजो छे<span>&#8221;</span>"
+                    data-fancybox="gallery"
+                    href="img/a1.jpg"
+                  >
+                    <img class="rounded" src="img/a1.jpg" width="200" height="150" />
+                  </a>
+                  <a
+                    data-caption="<center>Arial view of the Ashram</center>"
+                    data-fancybox="gallery"
+                    href="img/a2.jpg"
+                  >
+                    <img class="rounded" src="img/a2.jpg" width="200" height="150" />
+                  </a>
+                  <a
+                    data-caption="<center>Mul Sabhamandap<br>
+                    The chitrapat was ordered from Paris by Hiralalbhai Jhaveri.<br> There is a beautiful transit history of this chitrapat.<br> Please do visit Ashram to know more about it.
+                    This place is sanctified by Lotusfeet of P. P. Prabhushriji.</center>"
+                    data-fancybox="gallery"
+                    href="img/a3.jpg"
+                  >
+                    <img class="rounded" src="img/a3.jpg" width="200" height="150" />
+                  </a>
+                  <a
+                    data-caption="<center>Shwetambar Temple<br>
+                    Mul Nayak is Chandra Prabhu Swami. This temple is right above the Guru Mandir.<br>
+                    Digambar Temple<br>
+                    Mul Nayak is Chandra Prabhu Swami. It is above Shwetabar temple.<br> There is a black idol of
+                    Parshwanth Bhagwaan which has a sparkling history. Do visit to the temple to know the history.</center>"
+                    data-fancybox="gallery"
+                    href="img/a4.jpg"
+                  >
+                    <img class="rounded" src="img/a4.jpg" width="200" height="150" />
+                  </a>
+                  <a
+                    data-caption="<center>SOUL OF THE ASHRAM - GURU MANDIR<br>
+                    This Guru Madir is made by Mumukshus and not by Laborers.<br>
+                    Pran Pratistha was done by P. P. Prabhshriji and after completion of Pratistha,
+                    Prabhushriji embrassed the idol of Param Krupalu Dev and said that now <span>&#8220;</span>Anjan-shalaka<span>&#8221;</span> has happened.<br>
+                    Anyone attaining Samyak Darshan (Self realization) – this idol will play a role for that
+                    soul.<br>
+                    On one side of this idol is Lotusfeet of Param Krupaludev and other side Omkaarji</center>"
+                    data-fancybox="gallery"
+                    href="img/a5.jpg"
+                  >
+                    <img class="rounded" src="img/a5.jpg" width="200" height="150" />
+                  </a>
+                  <a
+                    data-caption=""
+                    data-fancybox="gallery"
+                    href="img/a6.jpg"
+                  >
+                    <img class="rounded" src="img/a6.jpg" width="200" height="150" />
+                  </a>
+                  <a
+                    data-caption="<center>New Sabhamandap<br> 
+                    This whole Sabhamandap is built of White Marble with a 13 foot Golden framed grand portrait of Shrimad Rajchandraji.<br>
+                    The 1st characteristic of this Chitrapat is that if one stands in front of this portrait and focuses on both toes of his divine feet, and moves either left or right then even his feet appear to move in that direction.<br>
+                    The 2nd characteristic is that both palms of his hands has a distinctive eye like mark.<br>
+                    It has a sitting capacity of around 2500 mumukshus.</center>"
+                    data-fancybox="gallery"
+                    href="img/a7.jpg"
+                  >
+                    <img class="rounded" src="img/a7.jpg" width="200" height="150" />
+                  </a>
+                  <a
+                    data-caption="<center>Param Pujya Prabhusriji Samaadhi<br>
+                    This land is sanctified as Prabhushriji had done his stunning Samaadhi Maran in Ashram and the last rites were performed on a sandalwood pyre in this place.<br>
+                    There is an exclusive story on Samadhi Maran of Prabhushriji. To know more, please do visit the Ashram.</center>"
+                    data-fancybox="gallery"
+                    href="img/a8.jpg"
+                  >
+                    <img class="rounded" src="img/a8.jpg" width="200" height="150" />
+                  </a>
+                  <a
+                    data-caption="<center>Pujya Bramhchariji Samadhi<br>
+                    In V.E 2070 on Kaartak Sud 7, P. Bramhchariji completed his life cycle. His body departed but did amazing Samadhi Maran.<br> At 11.00 a.m., along with the Palanquin of Bramhchariji, the funeral procession proceeded.<br>After circumambulation of the Ashram, at 1.00 pm the procession reached the cremation site. Lastly, the erudite trustee of the Ashram, Shri Amrutlal Parikh with tears in his eyes extolled the departed and as a final gesture of respect.</center>"
+                    data-fancybox="gallery"
+                    href="img/a9.jpg"
+                  >
+                    <img class="rounded" src="img/a9.jpg" width="200" height="150" />
+                  </a>
+                  <a
+                    data-caption="<center>Shri Raj Mandir Temple(Shanti Sthan)<br>
+                    Residences of Param Pujya Prabhushriji and Pujya Bramhchariji<br>
+                    This is the place where A seed of a True religion- Sadguru Agya (Oath) taken by Moksh seekers. This is the heart of the Ashram.</center>"
+                    data-fancybox="gallery"
+                    href="img/a10.jpg"
+                  >
+                    <img class="rounded" src="img/a10.jpg" width="200" height="150" />
+                  </a>
                 </div>
             </div>
             <!-- Vicharan Details End -->
@@ -341,26 +350,23 @@
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
         <script src="lib/wow/wow.min.js"></script>
         <script src="lib/easing/easing.min.js"></script>
         <script src="lib/waypoints/waypoints.min.js"></script>
         <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <!-- <script type="text/javascript">
-            //generate random color on load of vicharan-detail pages
-            function getRandomColor() {
-              var letters = 'BCDEF'.split('');
-              var color = '#';
-              for (var i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * letters.length)];
-              }
-              return color;
-            }
+        <script type="text/javascript">
+            Fancybox.bind('[data-fancybox="gallery"]', {
+              Thumbs: false,
+              Toolbar: false,
 
-            function setRandomColor() {
-                console.log("hello");
-              $("#colorpad").css("background-color", getRandomColor());
-            }
-        </script> -->
+              Image: {
+                zoom: false,
+                click: false,
+                wheel: "slide",
+              },
+            });
+        </script>
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>  
