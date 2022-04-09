@@ -7,106 +7,35 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Sanskaar Dhan</title>
 
-
-	<!-- Google Web Fonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap"
-		rel="stylesheet">
-
-	<!-- Icon Font Stylesheet -->
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-	<!-- Libraries Stylesheet -->
-	<link href="lib/animate/animate.min.css" rel="stylesheet">
-	<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-	<!-- Customized Bootstrap Stylesheet -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-
-	<!-- Template Stylesheet -->
-	<link href="css/style.css" rel="stylesheet">
-
+	<script type="module" src="js/header.js"></script>
+	<script type="module" src="js/footer.js"></script>
 </head>
 
 <body>
 	<div class="bg-white p-0">
-		<!-- Spinner Start -->
-		<div id="spinner"
-			class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-			<div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-				<span class="sr-only">Loading...</span>
-			</div>
-		</div>
-		<!-- Spinner End -->
+		<nav-bar></nav-bar>
 
-		<!-- Navbar Start -->
-		<div id="animate"></div>
-		<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0" >
-			<a href="index.html" class="navbar-brand">
-				<h1 class="m-0 text-primary"><img src="img/SD logo.jpg" alt="" width="65" height="70">Sanskaar Dhan</h1>
-			</a>
-			<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarCollapse">
-				<div class="navbar-nav ms-auto">
-					<a href="index.html" class="nav-item nav-link active">Home</a>
-					<a href="about-us.html" class="nav-item nav-link">About Us</a>
-					<a href="activities.html" class="nav-item nav-link">Activities</a>
-					<div class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="cursor: pointer;">Divine
-							Gurus</a>
-						<div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-							<a href="shrimadji.html" class="dropdown-item">Shrimad Rajchandraji</a>
-							<a href="prabhushriji.html" class="dropdown-item">Pujya Laghuraj Swami</a>
-							<a href="brahmachariji.html" class="dropdown-item">Pujya Brahmachariji</a>
-						</div>
-					</div>
-					<a href="vicharan.html" class="nav-item nav-link">Vicharan</a>
-					<a href="contact.html" class="nav-item nav-link">Contact Us</a>
-				</div>
-			</div>
-		</nav>
-		<!-- Navbar End -->
-
-		<!-- Curtain Start -->
-			<!-- <div class="">
-				<div class="test" id="pin2">
-					<div class="box">
-						<div>
-							<div class="left par" data-rate="-1">
-		
-							</div>
-							<div class="right par" data-rate="1">
-			
-							</div>
-						</div>
-					</div>
-				</div>
-			</div> -->
-		<!-- Curtain End -->
-		
-
-		<div id='scene'>
-			<div id='curtain'>
-				<img id="main_bg_image" src="img/homePageImg.png">
-		    	<div class='leftc par'></div>
-		    	<div class='rightc par'></div>
+		<div id="scene">
+			<div id="curtain">
+				<img id="main_bg_image" src="img/homePageImg.png" />
+				<div class="leftc par"></div>
+				<div class="rightc par"></div>
 			</div>
 		</div>
 
 		<!-- Carousel Start -->
 		<div class="container mt-3">
-			<div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+			<div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
 				<h1 class="mb-3">Sadguru Vichaar</h1>
 			</div>
 			<div class="container-fluid mb-5 quotes" data-wow-delay="0.1s">
-				<div class="text-center mx-auto py-4 mt-3 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h3 style="color:white;font-style: oblique;"><span>&#8220;</span>Please feel free to reach out to us. We are here to help your child inculcate religious values and morals to lead a better life. Fill out your details and queries below.<span>&#8221;</span></h3>
-                </div>
+				<div class="text-center mx-auto py-4 mt-3 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
+					<h3 style="color: white; font-style: oblique">
+						<span>&#8220;</span>Please feel free to reach out to us. We are
+						here to help your child inculcate religious values and morals to
+						lead a better life. Fill out your details and queries below.<span>&#8221;</span>
+					</h3>
+				</div>
 				<!-- <div id="myCarousel" class="carousel slide" data-bs-ride="carousel"
 					style="border-radius: 5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 
@@ -138,140 +67,30 @@
 						<span class="carousel-control-next-icon"></span>
 					</a>
 				</div> -->
-
 			</div>
 		</div>
 		<!-- Carousel End -->
 
-		<!-- Footer Start -->
-		<div class="container-fluid bg-dark text-white-50 footer wow fadeIn" data-wow-delay="0.1s"
-			style="margin-top: 125px;">
-			<div class="waves">
-				<div class="wave" id="wave1"></div>
-				<div class="wave" id="wave2"></div>
-				<div class="wave" id="wave3"></div>
-				<div class="wave" id="wave4"></div>
-			</div>
-			<div class="container py-4">
-				<div class="row g-5">
-					<div class="col-lg-3 col-md-6 text-center">
-						<h3 class="text-white mb-4">Get In Touch</h3>
-						<p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Station Rd Station near Agas Boria,
-							Post, Adas, Gujarat 388130</p>
-						<p class="mb-2"><i class="fa fa-phone-alt me-3"></i>02692 281 778</p>
-						<p class="mb-2"><i class="fa fa-envelope me-3"></i>agasashram@gmail.com</p>
-					</div>
-					<div class="col-lg-3 col-md-6 text-center">
-						<h3 class="text-white mb-4">Quick Links</h3>
-						<a class="btn btn-link text-white-50 text-center" href="about-us.html">About Us</a>
-						<a class="btn btn-link text-white-50 text-center" href="contact.html">Contact Us</a>
-						<!-- <a class="btn btn-link text-white-50" href="">Our Services</a>
-		                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
-		                        <a class="btn btn-link text-white-50" href="">Terms & Condition</a> -->
-					</div>
-					<div class="col-lg-3 col-md-6 text-center">
-						<h3 class="text-white mb-4">Photo Gallery</h3>
-						<div class="row g-2 pt-2">
-							<div class="col-4">
-								<img class="img-fluid rounded bg-light p-1" src="img/classes-1.jpg" alt="">
-							</div>
-							<div class="col-4">
-								<img class="img-fluid rounded bg-light p-1" src="img/classes-2.jpg" alt="">
-							</div>
-							<div class="col-4">
-								<img class="img-fluid rounded bg-light p-1" src="img/classes-3.jpg" alt="">
-							</div>
-							<div class="col-4">
-								<img class="img-fluid rounded bg-light p-1" src="img/classes-4.jpg" alt="">
-							</div>
-							<div class="col-4">
-								<img class="img-fluid rounded bg-light p-1" src="img/classes-5.jpg" alt="">
-							</div>
-							<div class="col-4">
-								<img class="img-fluid rounded bg-light p-1" src="img/classes-6.jpg" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 text-center">
-						<h3 class="text-white mb-4">Social Media Presence</h3>
-						<div class="fly-effect" style="text-align: -webkit-center;display: inline-flex;">
-							<a class="btn btn-outline-light btn-social" target="_blank" rel="noopener noreferrer"
-								href="https://chat.whatsapp.com/IuYmjlunr5b36P8QrHZAuG"><i
-									class="fab fa-whatsapp"></i></a>
-							<a class="btn btn-outline-light btn-social" target="_blank" rel="noopener noreferrer"
-								href="https://www.facebook.com/sanskaar.dhan.7"><i class="fab fa-facebook-f"></i></a>
-							<a class="btn btn-outline-light btn-social" target="_blank" rel="noopener noreferrer"
-								href="https://www.youtube.com/watch?v=VlFKJt2sYIY"><i class="fab fa-youtube"></i></a>
-							<a class="btn btn-outline-light btn-social" target="_blank" rel="noopener noreferrer"
-								href="https://www.instagram.com/sanskaar_dhan_/"><i class="fab fa-instagram"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="copyright">
-					<div class="row">
-						<div class="col-md-12 text-center mb-3 mb-md-0">
-                        	&copy; <a class="border-bottom" href="index.html">Sanskaar Dhan</a>, All Right Reserved.
-                        </div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- Footer End -->
+		<my-footer></my-footer>
 
 		<!-- Back to Top -->
-		<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="z-index: 1000;"><i
-				class="bi bi-arrow-up"></i></a>
+		<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="z-index: 1000">
+			<i class="bi bi-arrow-up"></i>
+		</a>
 	</div>
-
-	<!-- JavaScript Libraries -->
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="lib/wow/wow.min.js"></script>
-	<script src="lib/easing/easing.min.js"></script>
-	<script src="lib/waypoints/waypoints.min.js"></script>
-	<script src="lib/owlcarousel/owl.carousel.min.js"></script>
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
-		integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"
-		integrity="sha512-RvUydNGlqYJapy0t4AH8hDv/It+zKsv4wOQGb+iOnEfa6NnF2fzjXgRy+FDjSpMfC3sjokNUzsfYZaZ8QAwIxg=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"
-		integrity="sha512-5/OHwmQzDSBS0Ous4/hlYoWLHd06/d2r7LdKZQVBXOA6PvOqWVXtdboiLTU7lQTGyVoKVTNkwi0ol4gHGlw5ww=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
-		integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<!-- <script type="text/javascript">
-		var controller = new ScrollMagic.Controller();
-		$(function () { 
-			var scene = new ScrollMagic.Scene({
-				triggerElement: "#animate",
-				duration: 800,
-				triggerHook: 0,
-			})
-				.setPin("#curtain")
-				.addTo(controller);
-		});
-	</script> -->
-
-	<!-- Template Javascript -->
-	<script src="js/main.js"></script>
-
-	<script type="text/javascript">
-		window.addEventListener("scroll", function () {
-			showTime();
-		})
-
-		function showTime()
-		  {
-		    var curtain = document.getElementById("curtain");
-		    curtain.className = "open";
-		  }
-	</script>
-
 </body>
+
+<footer-scripts></footer-scripts>
+
+<script>
+	window.addEventListener("scroll", function () {
+		showTime();
+	});
+
+	function showTime() {
+		var curtain = document.getElementById("curtain");
+		curtain.className = "open";
+	}
+</script>
 
 </html>
