@@ -30,7 +30,9 @@
 
 	function showTime() {
 		var curtain = document.getElementById("curtain");
-		curtain.className = "open";
+		if(curtain) {
+			curtain.className = "open";
+		}
 	}
 </script>
 
