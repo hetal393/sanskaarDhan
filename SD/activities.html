@@ -1,387 +1,343 @@
-<!DOCTYPE html>
-<html lang="en">
-
-	<head>
-	    <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sanskaar Dhan</title>
-
-	    <!-- Google Web Fonts -->
-	    <link rel="preconnect" href="https://fonts.googleapis.com">
-	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
-	    
-	    <!-- Icon Font Stylesheet -->
-	    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-	    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-	    <!-- Libraries Stylesheet -->
-	    <link href="lib/animate/animate.min.css" rel="stylesheet">
-	    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-	    <!-- Customized Bootstrap Stylesheet -->
-	    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-	    <!-- Template Stylesheet -->
-	    <link href="css/style.css" rel="stylesheet">
-	</head>
-
-	<body>
-	    <div class="container-xxl bg-white p-0">
-	        
-	        <!-- header part comes here -->
-
-			<!-- Activities Start -->
-				<div class="container-xxl py-3" id="activityDetails">
-					<div class="container-fluid" style="background: linear-gradient(rgb(255 255 255 / 95%), rgb(255 255 255 / 95%)) , url(img/activity-main.jpg) fixed;">
-						<div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width:600px;">
-							<h1 class="mb-3">Activities in Pathshala</h1>
-							<p>Imparting knowledge about Jain Dharam with fun filled activities.</p>
-						</div>
-						<div class="row g-4">
-							<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" onclick="scrollToBooks()">
-					    		<div class="classes-item" data-bs-toggle="collapse" data-bs-target="#books">
-							        <div class="bg-light rounded-circle w-75 mx-auto p-3">
-							            <img class="img-fluid rounded-circle" src="img/tab1.jpg" alt="">
-							        </div>
-					        		<div class="bg-light rounded p-4 pt-5 mt-n5">
-					            		<span class="d-block text-center h3 mt-3 mb-4">Story Reading</span>
-							            <div class="row g-1">
-							                <div class="col-12">
-							                	<ul>
-							                		<li class="text-warning pt-2"><h6 class="text-warning mb-1">Mythological</h6></li>
-							                		<li class="text-secondary pt-2"><h6 class="text-secondary mb-1">Moral</h6></li>
-							                		<li class="text-success pt-2"><h6 class="text-success mb-1">Krupaludev's Life Events</h6></li>
-							                	</ul>
-							                </div>
-							            </div>
-							        </div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s" onclick="scrollToBhakti()">
-							    <div class="classes-item" data-bs-toggle="collapse" data-bs-target="#bhakti">
-							        <div class="bg-light rounded-circle w-75 mx-auto p-3">
-							            <img class="img-fluid rounded-circle" src="img/tab2.jpg" alt="">
-							        </div>
-							        <div class="bg-light rounded p-4 pt-5 mt-n5">
-							            <span class="d-block text-center h3 mt-3 mb-4">Nityakram & Prayer</span>
-							            <div class="row g-1">
-							                <div class="col-12">
-							                	<ul>
-							                		<li class="text-warning pt-2"><h6 class="text-warning mb-1">Satsang & Sadhna</h6></li>
-							                		<li class="text-secondary pt-2"><h6 class="text-secondary mb-1">Pooja & Bhakti</h6></li>
-							                		<li class="text-success pt-2"><h6 class="text-success mb-1">Seva & Sanskruti</h6></li>
-							                	</ul>
-							                </div>
-							            </div>
-							        </div>
-							    </div>
-							</div>
-							<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s" onclick="scrollToFun()">
-							    <div class="classes-item" data-bs-toggle="collapse" data-bs-target="#fun">
-							        <div class="bg-light rounded-circle w-75 mx-auto p-3">
-							            <img class="img-fluid rounded-circle" src="img/tab3.jpg" alt="">
-							        </div>
-							        <div class="bg-light rounded p-4 pt-5 mt-n5">
-							            <span class="d-block text-center h3 mt-3 mb-4">Fun Corner</span>
-							            <div class="row g-1">
-							                <div class="col-12">
-							                	<ul>
-							                		<li class="text-warning pt-2"><h6 class="text-warning mb-1">Games</h6></li>
-							                		<li class="text-secondary pt-2"><h6 class="text-secondary mb-1">Skits</h6></li>
-							                		<li class="text-success pt-2"><h6 class="text-success mb-1">Stavan Singing</h6></li>
-							                	</ul>
-							                </div>
-							            </div>
-							        </div>
-							    </div>
+<!-- Activities Start -->
+<div class="container-xxl py-3" id="activityDetails">
+	<div class="container-fluid" style="
+            background: linear-gradient(
+                rgb(255 255 255 / 95%),
+                rgb(255 255 255 / 95%)
+              ),
+              url(img/activity-main.jpg) fixed;
+          ">
+		<div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
+			<h1 class="mb-3">Activities in Pathshala</h1>
+			<p>
+				Imparting knowledge about Jain Dharam with fun filled activities.
+			</p>
+		</div>
+		<div class="row g-4">
+			<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" onclick="scrollToBooks()">
+				<div class="classes-item" data-bs-toggle="collapse" data-bs-target="#books">
+					<div class="bg-light rounded-circle w-75 mx-auto p-3">
+						<img class="img-fluid rounded-circle" src="img/tab1.jpg" alt="" />
+					</div>
+					<div class="bg-light rounded p-4 pt-5 mt-n5">
+						<span class="d-block text-center h3 mt-3 mb-4">Story Reading</span>
+						<div class="row g-1">
+							<div class="col-12">
+								<ul>
+									<li class="text-warning pt-2">
+										<h6 class="text-warning mb-1">Mythological</h6>
+									</li>
+									<li class="text-secondary pt-2">
+										<h6 class="text-secondary mb-1">Moral</h6>
+									</li>
+									<li class="text-success pt-2">
+										<h6 class="text-success mb-1">
+											Krupaludev's Life Events
+										</h6>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>
-
-					<!-- Start Activity Details -->
-
-					<!-- books / story reading section start -->
-						<div id="books" data-bs-parent="#activityDetails" class="container-fluid collapse mt-3" style="background: linear-gradient(rgb(255 255 255 / 95%), rgb(255 255 255 / 95%)), url(img/activity-bg.jpg) fixed;">
-							<div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-	                        <h1 class="mb-3" style="color:#f94343;">Story Books</h1>
-	                        </div>
-				            <div class="grid-style col-lg-12 wow fadeIn" data-wow-delay="0.1s">
-				            	<div class="wrapper">
-									<div class="book">
-										<a href="book/angry-dog.pdf">
-											<img class="book__cover" data-pdf-thumbnail-file="book/angry-dog.pdf">
-											<div class="book__page"></div>
-										</a>
-									</div>
-									<h4>Angry Dog</h4>
-								</div>
-								<div class="wrapper">
-									<div class="book">
-										<a href="book/angry-king.pdf">
-											<img class="book__cover" data-pdf-thumbnail-file="book/angry-king.pdf">
-											<div class="book__page"></div>
-										</a>
-									</div>
-									<h4>Angry King</h4>
-								</div>
-								<div class="wrapper">
-									<div class="book">
-										<a href="book/ash-learns-to-get-up-early.pdf">
-											<img class="book__cover" data-pdf-thumbnail-file="book/ash-learns-to-get-up-early.pdf">
-											<div class="book__page"></div>
-										</a>
-									</div>
-									<h4>Ash learns to get up early</h4>
-								</div>
-								<div class="wrapper">
-									<div class="book">
-										<a href="book/babool-tree.pdf">
-											<img class="book__cover" data-pdf-thumbnail-file="book/babool-tree.pdf">
-											<div class="book__page"></div>
-										</a>
-									</div>
-									<h4>Babool Tree</h4>
-								</div>
-								<div class="wrapper">
-									<div class="book">
-										<a href="book/Birds-and-friends.pdf">
-											<img class="book__cover" data-pdf-thumbnail-file="book/Birds-and-friends.pdf">
-											<div class="book__page"></div>
-										</a>
-									</div>
-									<h4>Birds & Friend</h4>
-								</div>
-								<div class="wrapper">
-									<div class="book">
-										<a href="book/Birds-and-the-Jackal.pdf">
-											<img class="book__cover" data-pdf-thumbnail-file="book/Birds-and-the-Jackal.pdf">
-											<div class="book__page"></div>
-										</a>
-									</div>
-									<h4>Bird & the Jackal</h4>
-								</div>
-								<div class="wrapper">
-									<div class="book">
-										<a href="book/Birds-and-the-Seeds.pdf">
-											<img class="book__cover" data-pdf-thumbnail-file="book/Birds-and-the-Seeds.pdf">
-											<div class="book__page"></div>
-										</a>
-									</div>
-									<h4>Birds & the Seeds</h4>
-								</div>
-								<div class="wrapper">
-									<div class="book">
-										<a href="book/Bunny-in-trouble.pdf">
-											<img class="book__cover" data-pdf-thumbnail-file="book/Bunny-in-trouble.pdf">
-											<div class="book__page"></div>
-										</a>
-									</div>
-									<h4>Bunny in trouble</h4>
-								</div>
-								<div class="wrapper">
-									<div class="book">
-										<a href="book/Compassion-Of-The-Elephant.pdf">
-											<img class="book__cover" data-pdf-thumbnail-file="book/Compassion-Of-The-Elephant.pdf">
-											<div class="book__page"></div>
-										</a>
-									</div>
-									<h4>Compassion Of The Elephant</h4>
-								</div>
-								<div class="wrapper">
-									<div class="book">
-										<a href="book/cooko-who-made-fun.pdf">
-											<img class="book__cover" data-pdf-thumbnail-file="book/cooko-who-made-fun.pdf">
-											<div class="book__page"></div>
-										</a>
-									</div>
-									<h4>cooko who made fun</h4>
-								</div>
-								<div class="wrapper">
-									<div class="book">
-										<a href="book/Cross-Eyed-King.pdf">
-											<img class="book__cover" data-pdf-thumbnail-file="book/Cross-Eyed-King.pdf">
-											<div class="book__page"></div>
-										</a>
-									</div>
-									<h4>Cross Eyed King</h4>
-								</div>
-								<div class="wrapper">
-									<div class="book">
-										<div class="book__cover" style="background-image:url(img/sample.jpg);">
-										</div>
-										<div class="book__page"></div>
-									</div>
-									<h4>Plain</h4>
-								</div>
-								<div class="wrapper">
-									<div class="book">
-										<div class="book__cover" style="background-image:url(img/sample.jpg);">
-										</div>
-										<div class="book__page"></div>
-									</div>
-									<h4>Plain</h4>
-								</div>
-								<div class="wrapper">
-									<div class="book">
-										<div class="book__cover" style="background-image:url(img/sample.jpg);">
-										</div>
-										<div class="book__page"></div>
-									</div>
-									<h4>Plain</h4>
-								</div>
-								<div class="wrapper">
-									<div class="book">
-										<div class="book__cover" style="background-image:url(img/sample.jpg);">
-										</div>
-										<div class="book__page"></div>
-									</div>
-									<h4>Plain</h4>
-								</div>
-								<div class="wrapper">
-									<div class="book">
-										<div class="book__cover" style="background-image:url(img/sample.jpg);">
-										</div>
-										<div class="book__page"></div>
-									</div>
-									<h4>Plain</h4>
-								</div>
-								<div class="wrapper">
-									<div class="book">
-										<div class="book__cover" style="background-image:url(img/sample.jpg);">
-										</div>
-										<div class="book__page"></div>
-									</div>
-									<h4>Plain</h4>
-								</div>
-								<div class="wrapper">
-									<div class="book">
-										<div class="book__cover" style="background-image:url(img/sample.jpg);">
-										</div>
-										<div class="book__page"></div>
-									</div>
-									<h4>Plain</h4>
-								</div>
-								<div class="wrapper">
-									<div class="book">
-										<div class="book__cover" style="background-image:url(img/sample.jpg);">
-										</div>
-										<div class="book__page"></div>
-									</div>
-									<h4>Plain</h4>
-								</div>
-								<div class="wrapper">
-									<div class="book">
-										<div class="book__cover" style="background-image:url(img/sample.jpg);">
-										</div>
-										<div class="book__page"></div>
-									</div>
-									<h4>Plain</h4>
-								</div>
-								<div class="wrapper">
-									<div class="book">
-										<div class="book__cover" style="background-image:url(img/sample.jpg);">
-										</div>
-										<div class="book__page"></div>
-									</div>
-									<h4>Plain</h4>
-								</div>
-								<div class="wrapper">
-									<div class="book">
-										<div class="book__cover" style="background-image:url(img/sample.jpg);">
-										</div>
-										<div class="book__page"></div>
-									</div>
-									<h4>Plain</h4>
-								</div>
-								<div class="wrapper">
-									<div class="book">
-										<div class="book__cover" style="background-image:url(img/sample.jpg);">
-										</div>
-										<div class="book__page"></div>
-									</div>
-									<h4>Plain</h4>
-								</div>
-								<div class="wrapper">
-									<div class="book">
-										<div class="book__cover" style="background-image:url(img/sample.jpg);">
-										</div>
-										<div class="book__page"></div>
-									</div>
-									<h4>Plain</h4>
-								</div>
-								<div class="wrapper">
-									<div class="book">
-										<div class="book__cover" style="background-image:url(img/sample.jpg);">
-										</div>
-										<div class="book__page"></div>
-									</div>
-									<h4>Plain</h4>
-								</div>
-								<div class="wrapper">
-									<div class="book">
-										<div class="book__cover" style="background-image:url(img/sample.jpg);">
-										</div>
-										<div class="book__page"></div>
-									</div>
-									<h4>Plain</h4>
-								</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s" onclick="scrollToBhakti()">
+				<div class="classes-item" data-bs-toggle="collapse" data-bs-target="#bhakti">
+					<div class="bg-light rounded-circle w-75 mx-auto p-3">
+						<img class="img-fluid rounded-circle" src="img/tab2.jpg" alt="" />
+					</div>
+					<div class="bg-light rounded p-4 pt-5 mt-n5">
+						<span class="d-block text-center h3 mt-3 mb-4">Nityakram & Prayer</span>
+						<div class="row g-1">
+							<div class="col-12">
+								<ul>
+									<li class="text-warning pt-2">
+										<h6 class="text-warning mb-1">Satsang & Sadhna</h6>
+									</li>
+									<li class="text-secondary pt-2">
+										<h6 class="text-secondary mb-1">Pooja & Bhakti</h6>
+									</li>
+									<li class="text-success pt-2">
+										<h6 class="text-success mb-1">Seva & Sanskruti</h6>
+									</li>
+								</ul>
 							</div>
 						</div>
-					<!-- books / story reading section end -->
-
-					<!-- bhakti/ nityakram section start -->
-						<div id="bhakti" data-bs-parent="#activityDetails" class="container-fluid collapse mt-3" style="background: linear-gradient(#63d3d4, #2196f394), url(img/activity-bhakti.jpg) fixed;">
-							<div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-	                        <h1 class="mb-3" style="color:#f94343;">Story Books</h1>
-	                        </div>
-						</div>
-					<!-- bhakti/ nityakram section end -->
-
-					<!-- fun corner section start -->
-						<div id="fun" data-bs-parent="#activityDetails" class="container-fluid collapse mt-3" style="background: linear-gradient(#ea6d51, #ea6d51a3), url(img/activity-fun.jpg) fixed;">
-							<div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-	                        <h1 class="mb-3" style="color:#f94343;">Story Books</h1>
-	                        </div>
-						</div>
-					<!-- fun corner section end -->
-
-					<!-- End Activity Details -->
+					</div>
 				</div>
-			<!-- Activities End -->
-
-			<!-- footer part comes here -->
-			
+			</div>
+			<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s" onclick="scrollToFun()">
+				<div class="classes-item" data-bs-toggle="collapse" data-bs-target="#fun">
+					<div class="bg-light rounded-circle w-75 mx-auto p-3">
+						<img class="img-fluid rounded-circle" src="img/tab3.jpg" alt="" />
+					</div>
+					<div class="bg-light rounded p-4 pt-5 mt-n5">
+						<span class="d-block text-center h3 mt-3 mb-4">Fun Corner</span>
+						<div class="row g-1">
+							<div class="col-12">
+								<ul>
+									<li class="text-warning pt-2">
+										<h6 class="text-warning mb-1">Games</h6>
+									</li>
+									<li class="text-secondary pt-2">
+										<h6 class="text-secondary mb-1">Skits</h6>
+									</li>
+									<li class="text-success pt-2">
+										<h6 class="text-success mb-1">Stavan Singing</h6>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+	</div>
 
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="js/pdfThumbnails.js" data-pdfjs-src="js/pdf.js/build/pdf.js"></script>
-        <script type="text/javascript">
-			function scrollToBooks() {
-			  const element = document.getElementById("books");
-			  element.scrollIntoView();
-			}
+	<!-- Start Activity Details -->
 
-			function scrollToBhakti() {
-			  const element = document.getElementById("bhakti");
-			  element.scrollIntoView();
-			}
+	<!-- books / story reading section start -->
+	<div id="books" data-bs-parent="#activityDetails" class="container-fluid collapse mt-3" style="
+            background: linear-gradient(
+                rgb(255 255 255 / 95%),
+                rgb(255 255 255 / 95%)
+              ),
+              url(img/activity-bg.jpg) fixed;
+          ">
+		<div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
+			<h1 class="mb-3" style="color: #f94343">Story Books</h1>
+		</div>
+		<div class="grid-style col-lg-12 wow fadeIn" data-wow-delay="0.1s">
+			<div class="wrapper">
+				<div class="book">
+					<a href="book/angry-dog.pdf">
+						<img class="book__cover" data-pdf-thumbnail-file="book/angry-dog.pdf" />
+						<div class="book__page"></div>
+					</a>
+				</div>
+				<h4>Angry Dog</h4>
+			</div>
+			<div class="wrapper">
+				<div class="book">
+					<a href="book/angry-king.pdf">
+						<img class="book__cover" data-pdf-thumbnail-file="book/angry-king.pdf" />
+						<div class="book__page"></div>
+					</a>
+				</div>
+				<h4>Angry King</h4>
+			</div>
+			<div class="wrapper">
+				<div class="book">
+					<a href="book/ash-learns-to-get-up-early.pdf">
+						<img class="book__cover" data-pdf-thumbnail-file="book/ash-learns-to-get-up-early.pdf" />
+						<div class="book__page"></div>
+					</a>
+				</div>
+				<h4>Ash learns to get up early</h4>
+			</div>
+			<div class="wrapper">
+				<div class="book">
+					<a href="book/babool-tree.pdf">
+						<img class="book__cover" data-pdf-thumbnail-file="book/babool-tree.pdf" />
+						<div class="book__page"></div>
+					</a>
+				</div>
+				<h4>Babool Tree</h4>
+			</div>
+			<div class="wrapper">
+				<div class="book">
+					<a href="book/Birds-and-friends.pdf">
+						<img class="book__cover" data-pdf-thumbnail-file="book/Birds-and-friends.pdf" />
+						<div class="book__page"></div>
+					</a>
+				</div>
+				<h4>Birds & Friend</h4>
+			</div>
+			<div class="wrapper">
+				<div class="book">
+					<a href="book/Birds-and-the-Jackal.pdf">
+						<img class="book__cover" data-pdf-thumbnail-file="book/Birds-and-the-Jackal.pdf" />
+						<div class="book__page"></div>
+					</a>
+				</div>
+				<h4>Bird & the Jackal</h4>
+			</div>
+			<div class="wrapper">
+				<div class="book">
+					<a href="book/Birds-and-the-Seeds.pdf">
+						<img class="book__cover" data-pdf-thumbnail-file="book/Birds-and-the-Seeds.pdf" />
+						<div class="book__page"></div>
+					</a>
+				</div>
+				<h4>Birds & the Seeds</h4>
+			</div>
+			<div class="wrapper">
+				<div class="book">
+					<a href="book/Bunny-in-trouble.pdf">
+						<img class="book__cover" data-pdf-thumbnail-file="book/Bunny-in-trouble.pdf" />
+						<div class="book__page"></div>
+					</a>
+				</div>
+				<h4>Bunny in trouble</h4>
+			</div>
+			<div class="wrapper">
+				<div class="book">
+					<a href="book/Compassion-Of-The-Elephant.pdf">
+						<img class="book__cover" data-pdf-thumbnail-file="book/Compassion-Of-The-Elephant.pdf" />
+						<div class="book__page"></div>
+					</a>
+				</div>
+				<h4>Compassion Of The Elephant</h4>
+			</div>
+			<div class="wrapper">
+				<div class="book">
+					<a href="book/cooko-who-made-fun.pdf">
+						<img class="book__cover" data-pdf-thumbnail-file="book/cooko-who-made-fun.pdf" />
+						<div class="book__page"></div>
+					</a>
+				</div>
+				<h4>cooko who made fun</h4>
+			</div>
+			<div class="wrapper">
+				<div class="book">
+					<a href="book/Cross-Eyed-King.pdf">
+						<img class="book__cover" data-pdf-thumbnail-file="book/Cross-Eyed-King.pdf" />
+						<div class="book__page"></div>
+					</a>
+				</div>
+				<h4>Cross Eyed King</h4>
+			</div>
+			<div class="wrapper">
+				<div class="book">
+					<div class="book__cover" style="background-image: url(img/sample.jpg)"></div>
+					<div class="book__page"></div>
+				</div>
+				<h4>Plain</h4>
+			</div>
+			<div class="wrapper">
+				<div class="book">
+					<div class="book__cover" style="background-image: url(img/sample.jpg)"></div>
+					<div class="book__page"></div>
+				</div>
+				<h4>Plain</h4>
+			</div>
+			<div class="wrapper">
+				<div class="book">
+					<div class="book__cover" style="background-image: url(img/sample.jpg)"></div>
+					<div class="book__page"></div>
+				</div>
+				<h4>Plain</h4>
+			</div>
+			<div class="wrapper">
+				<div class="book">
+					<div class="book__cover" style="background-image: url(img/sample.jpg)"></div>
+					<div class="book__page"></div>
+				</div>
+				<h4>Plain</h4>
+			</div>
+			<div class="wrapper">
+				<div class="book">
+					<div class="book__cover" style="background-image: url(img/sample.jpg)"></div>
+					<div class="book__page"></div>
+				</div>
+				<h4>Plain</h4>
+			</div>
+			<div class="wrapper">
+				<div class="book">
+					<div class="book__cover" style="background-image: url(img/sample.jpg)"></div>
+					<div class="book__page"></div>
+				</div>
+				<h4>Plain</h4>
+			</div>
+			<div class="wrapper">
+				<div class="book">
+					<div class="book__cover" style="background-image: url(img/sample.jpg)"></div>
+					<div class="book__page"></div>
+				</div>
+				<h4>Plain</h4>
+			</div>
+			<div class="wrapper">
+				<div class="book">
+					<div class="book__cover" style="background-image: url(img/sample.jpg)"></div>
+					<div class="book__page"></div>
+				</div>
+				<h4>Plain</h4>
+			</div>
+			<div class="wrapper">
+				<div class="book">
+					<div class="book__cover" style="background-image: url(img/sample.jpg)"></div>
+					<div class="book__page"></div>
+				</div>
+				<h4>Plain</h4>
+			</div>
+			<div class="wrapper">
+				<div class="book">
+					<div class="book__cover" style="background-image: url(img/sample.jpg)"></div>
+					<div class="book__page"></div>
+				</div>
+				<h4>Plain</h4>
+			</div>
+			<div class="wrapper">
+				<div class="book">
+					<div class="book__cover" style="background-image: url(img/sample.jpg)"></div>
+					<div class="book__page"></div>
+				</div>
+				<h4>Plain</h4>
+			</div>
+			<div class="wrapper">
+				<div class="book">
+					<div class="book__cover" style="background-image: url(img/sample.jpg)"></div>
+					<div class="book__page"></div>
+				</div>
+				<h4>Plain</h4>
+			</div>
+			<div class="wrapper">
+				<div class="book">
+					<div class="book__cover" style="background-image: url(img/sample.jpg)"></div>
+					<div class="book__page"></div>
+				</div>
+				<h4>Plain</h4>
+			</div>
+			<div class="wrapper">
+				<div class="book">
+					<div class="book__cover" style="background-image: url(img/sample.jpg)"></div>
+					<div class="book__page"></div>
+				</div>
+				<h4>Plain</h4>
+			</div>
+			<div class="wrapper">
+				<div class="book">
+					<div class="book__cover" style="background-image: url(img/sample.jpg)"></div>
+					<div class="book__page"></div>
+				</div>
+				<h4>Plain</h4>
+			</div>
+		</div>
+	</div>
+	<!-- books / story reading section end -->
 
-			function scrollToFun() {
-			  const element = document.getElementById("fun");
-			  element.scrollIntoView();
-			}
-        </script>
+	<!-- bhakti/ nityakram section start -->
+	<div id="bhakti" data-bs-parent="#activityDetails" class="container-fluid collapse mt-3" style="
+            background: linear-gradient(#63d3d4, #2196f394),
+              url(img/activity-bhakti.jpg) fixed;
+          ">
+		<div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
+			<h1 class="mb-3" style="color: #f94343">Story Books</h1>
+		</div>
+	</div>
+	<!-- bhakti/ nityakram section end -->
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-	</body>
+	<!-- fun corner section start -->
+	<div id="fun" data-bs-parent="#activityDetails" class="container-fluid collapse mt-3" style="
+            background: linear-gradient(#ea6d51, #ea6d51a3),
+              url(img/activity-fun.jpg) fixed;
+          ">
+		<div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
+			<h1 class="mb-3" style="color: #f94343">Story Books</h1>
+		</div>
+	</div>
+	<!-- fun corner section end -->
 
-</html>
+	<!-- End Activity Details -->
+</div>
+<!-- Activities End -->
