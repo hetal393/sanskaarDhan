@@ -1,18 +1,18 @@
-(function ($) {
+(function($) {
     "use strict";
 
     // Initiate the wowjs
     new WOW().init();
 
     //load content from top on every refresh
-    $(document).ready(function(){
+    $(document).ready(function() {
         $(this).scrollTop(0);
     });
 
 
     // Spinner
-    var spinner = function () {
-        setTimeout(function () {
+    var spinner = function() {
+        setTimeout(function() {
             if ($('#spinner').length > 0) {
                 $('#spinner').removeClass('show');
             }
@@ -22,15 +22,15 @@
 
 
     // Sticky Navbar
-    // $(window).scroll(function () {
-    //     if ($(this).scrollTop() > 100) {
-    //         $('.sticky-top').addClass('shadow-sm').css('top', '0px');
-    //     } else {
-    //         $('.sticky-top').removeClass('shadow-sm').css('top', '-100px');
-    //     }
-    // });
-    
-    
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            $('.sticky-top').addClass('shadow-sm').css('top', '0px');
+        } else {
+            $('.sticky-top').removeClass('shadow-sm').css('top', '-100px');
+        }
+    });
+
+
     // // Back to top button
     // $(window).scroll(function () {
     //     if ($(this).scrollTop() > 300) {
@@ -45,10 +45,66 @@
     // });
 
 
+    //kind words caraousel
+    function moveToSelected(element) {
+        if (element == "next") {
+            var selected = $(".selected").next();
+        } else if (element == "prev") {
+            var selected = $(".selected").prev();
+        } else {
+            var selected = element;
+        }
 
-    
+        var next = $(selected).next();
+        var prev = $(selected).prev();
+        var prevSecond = $(prev).prev();
+        var nextSecond = $(next).next();
 
-    
+        $(selected).removeClass().addClass("selected");
+
+        $(prev).removeClass().addClass("prev");
+        $(next).removeClass().addClass("next");
+
+        $(nextSecond).removeClass().addClass("nextRightSecond");
+        $(prevSecond).removeClass().addClass("prevLeftSecond");
+
+        $(nextSecond).nextAll().removeClass().addClass("hideRight");
+        $(prevSecond).prevAll().removeClass().addClass("hideLeft");
+    }
+
+    // Eventos teclado
+    $(document).keydown(function(e) {
+        switch (e.which) {
+            case 37: // left
+                moveToSelected("prev");
+                break;
+
+            case 39: // right
+                moveToSelected("next");
+                break;
+
+            default:
+                return;
+        }
+        e.preventDefault();
+    });
+
+    $("#carousel div").click(function() {
+        moveToSelected($(this));
+    });
+
+    $("#prev").click(function() {
+        moveToSelected("prev");
+    });
+
+    $("#next").click(function() {
+        moveToSelected("next");
+    });
+
+
+
+
+
 })(jQuery);
 
 

@@ -1,17 +1,17 @@
 class HeaderTitle extends HTMLElement {
-	connectedCallBack() {
-		document.getElementsByTagName("head")[0].appendChild(`
+    connectedCallBack() {
+        document.getElementsByTagName("head")[0].appendChild(`
 			<meta charset="utf-8" />
 			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			<title>Sanskaar Dhan</title>
 	`);
-	}
+    }
 }
 
 class HeaderScripts extends HTMLElement {
-	connectedCallBack() {
-		this.innerHTML = `
+    connectedCallBack() {
+        this.innerHTML = `
 		<!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +22,9 @@ class HeaderScripts extends HTMLElement {
         <!-- Icon Font Stylesheet -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+		<!-- Fancy Box stylesheet -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
     
         <!-- Libraries Stylesheet -->
         <link href="lib/animate/animate.min.css" rel="stylesheet">
@@ -33,38 +36,35 @@ class HeaderScripts extends HTMLElement {
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
 		`;
-	}
+    }
 }
 
 class NavBar extends HTMLElement {
-	connectedCallback() {
-		fetch('/SD/navigation.html').then(data => data.text()
-		).then(text => {
-			this.innerHTML = text;
-		});
+    connectedCallback() {
+        fetch('/SD/navigation.html').then(data => data.text()).then(text => {
+            this.innerHTML = text;
+        });
 
-		fetch('/SD/main.html').then(data => data.text()
-		).then(text => {
-			document.getElementById('main-component').innerHTML = text;
-		});
+        fetch('/SD/main.html').then(data => data.text()).then(text => {
+            document.getElementById('main-component').innerHTML = text;
+        });
 
-		this.addEventListener("click", this.onclick, true);
-	}
+        this.addEventListener("click", this.onclick, true);
+    }
 
 
-	onclick(ev) {
-		if (ev.target.dataset.id !== 'ignore') {
-			fetch('/SD/' + ev.target.dataset.id + '.html').then(data => data.text()
-			).then(text => {
-				document.getElementById('main-component').innerHTML = '';
-				document.getElementById('main-component').innerHTML = text;
-			});
+    onclick(ev) {
+        if (ev.target.dataset.id !== 'ignore') {
+            fetch('/SD/' + ev.target.dataset.id + '.html').then(data => data.text()).then(text => {
+                document.getElementById('main-component').innerHTML = '';
+                document.getElementById('main-component').innerHTML = text;
+            });
 
-			$('.active').removeClass('active');
-			$(ev.target).addClass('active');
-		}
+            $('.active').removeClass('active');
+            $(ev.target).addClass('active');
+        }
 
-	}
+    }
 }
 
 
