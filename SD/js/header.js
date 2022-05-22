@@ -9,36 +9,6 @@ class HeaderTitle extends HTMLElement {
     }
 }
 
-class HeaderScripts extends HTMLElement {
-    connectedCallBack() {
-        this.innerHTML = `
-		<!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap"
-            rel="stylesheet">
-    
-        <!-- Icon Font Stylesheet -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-		<!-- Fancy Box stylesheet -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
-    
-        <!-- Libraries Stylesheet -->
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-    
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-		`;
-    }
-}
-
 class NavBar extends HTMLElement {
     connectedCallback() {
         fetch('/SD/navigation.html').then(data => data.text()).then(text => {
@@ -54,7 +24,9 @@ class NavBar extends HTMLElement {
 
 
     onclick(ev) {
-        if (ev.target.dataset.id !== 'ignore') {
+        if (ev.target && ev.target.dataset && ev.target.dataset.id &&
+            ev.target.dataset.id !== 'ignore') {
+            console.log(ev.target.dataset.id);
             fetch('/SD/' + ev.target.dataset.id + '.html').then(data => data.text()).then(text => {
                 document.getElementById('main-component').innerHTML = '';
                 document.getElementById('main-component').innerHTML = text;
@@ -70,5 +42,4 @@ class NavBar extends HTMLElement {
 
 
 customElements.define("header-title", HeaderTitle);
-customElements.define("header-scripts", HeaderScripts);
 customElements.define("nav-bar", NavBar);
