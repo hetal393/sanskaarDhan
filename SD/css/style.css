@@ -1274,6 +1274,17 @@ h6,
     transform: translate(-50%, -50%) scale(1);
 }
 
+.about_us-video_aligment {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.vicharan-navigation_destination_hide {
+    display: none;
+}
+
 
 /*@media for tablet view*/
 

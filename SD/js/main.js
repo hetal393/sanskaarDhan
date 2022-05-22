@@ -30,21 +30,6 @@
         }
     });
 
-
-    // // Back to top button
-    // $(window).scroll(function () {
-    //     if ($(this).scrollTop() > 300) {
-    //         $('.back-to-top').fadeIn('slow');
-    //     } else {
-    //         $('.back-to-top').fadeOut('slow');
-    //     }
-    // });
-    // $('.back-to-top').click(function () {
-    //     $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-    //     return false;
-    // });
-
-
     //kind words caraousel
     function moveToSelected(element) {
         if (element == "next") {
@@ -102,11 +87,27 @@
     });
 
 
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        Thumbs: false,
+        Toolbar: false,
 
-
+        Image: {
+            zoom: false,
+            click: false,
+            wheel: "slide",
+        },
+    });
 
 })(jQuery);
 
+
+
+function navigate(value) {
+    $('.vicharan-navigation_destination').addClass('vicharan-navigation_destination_hide')
+    if(value === 'agas') {
+        $('vicharan-agas').toggleClass("vicharan-navigation_destination_hide");
+    }
+}
 
 $('head').append('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />');
 $('head').append('<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet" />');
@@ -116,3 +117,4 @@ $('head').append('<link href="lib/animate/animate.min.css" rel="stylesheet" />')
 $('head').append('<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />');
 $('head').append('<link href="css/bootstrap.min.css" rel="stylesheet" />');
 $('head').append('<link href="css/style.css" rel="stylesheet" />');
+$('head').append('<link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" rel="stylesheet" />');

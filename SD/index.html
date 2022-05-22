@@ -9,6 +9,7 @@
 
 	<script type="module" src="js/header.js"></script>
 	<script type="module" src="js/footer.js"></script>
+	<script type="module" src="js/vicharan.js"></script>
 </head>
 
 <body>
@@ -34,6 +35,21 @@
 			curtain.className = "open";
 		}
 	}
+
+	function scrollToBooks() {
+        const element = document.getElementById("books");
+        element.scrollIntoView();
+    }
+
+    function scrollToBhakti() {
+        const element = document.getElementById("bhakti");
+        element.scrollIntoView();
+    }
+
+    function scrollToFun() {
+        const element = document.getElementById("fun");
+        element.scrollIntoView();
+    }
 </script>
 
 </html>
