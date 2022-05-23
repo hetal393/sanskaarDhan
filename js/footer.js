@@ -1,6 +1,6 @@
 class MyFooter extends HTMLElement {
     connectedCallback() {
-        fetch('/SD/footer.html').then(data => data.text()).then(text => {
+        fetch('/footer.html').then(data => data.text()).then(text => {
             this.innerHTML = text;
         });
     }

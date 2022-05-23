@@ -1,6 +1,6 @@
 class VicharanAgas extends HTMLElement {
     connectedCallback() {
-        fetch('/SD/agas.html').then(data => data.text()).then(text => {
+        fetch('/agas.html').then(data => data.text()).then(text => {
             this.scrollIntoView();
             this.innerHTML = text;
         });
