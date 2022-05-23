@@ -20,6 +20,20 @@
     };
     spinner();
 
+    // Header carousel
+    $(".header-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1500,
+        items: 1,
+        dots: true,
+        loop: true,
+        nav: true,
+        navText: [
+            '<i class="bi bi-chevron-left"></i>',
+            '<i class="bi bi-chevron-right"></i>'
+        ]
+    });
+
 
     // Sticky Navbar
     $(window).scroll(function() {
@@ -104,12 +118,13 @@
 
 function navigate(value) {
     $('.vicharan-navigation_destination').addClass('vicharan-navigation_destination_hide')
-    if(value === 'agas') {
+    if (value === 'agas') {
         $('vicharan-agas').toggleClass("vicharan-navigation_destination_hide");
     }
 }
 
 $('head').append('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />');
+$('head').append('<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />');
 $('head').append('<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet" />');
 $('head').append('<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />');
 $('head').append('<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />');

@@ -12,17 +12,6 @@ html {
     margin: 0;
 }
 
-.bg {
-    /* The image used */
-    background-image: url("../img/bg-1.gif");
-    /* Full height */
-    height: 100%;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .quotes {
     background-image: url("../img/quotes-background.jpg");
     min-height: 19rem;
@@ -42,47 +31,12 @@ html {
     background: floralwhite;
 }
 
-.box {
-    position: relative;
-    width: 100%;
-    /*min-height: calc(100vh - 84.391px);*/
-    /* height: 85vh; */
-    border: 5px solid black;
-    background: url("../img/homePageImg.png") center top no-repeat;
-    background-size: cover;
-    /* overflow-x: hidden; */
-    /* margin-bottom: 30px; */
-}
-
-.left {
-    position: absolute;
-    width: 50%;
-    left: 0;
-    height: -webkit-fill-available;
-    background: url("../img/sample.gif");
-    background-size: cover;
-}
-
-.right {
-    position: absolute;
-    width: 50%;
-    right: 0;
-    height: -webkit-fill-available;
-    background: url("../img/sample.gif");
-    background-size: cover;
-}
-
 .back-to-top {
     position: fixed;
     display: none;
     right: 45px;
     bottom: 45px;
     z-index: 99;
-}
-
-#main_bg_image {
-    height: auto;
-    width: 100%;
 }
 
 #carousel {
@@ -187,129 +141,6 @@ html {
 }
 
 
-/*////////////////////////////////////////////////////////////*/
-
-#scene {
-    position: relative;
-    width: 100%;
-    /* min-height: calc(100vh - 84.391px); */
-    /*height: 85vh;*/
-    /*border: 5px solid black;*/
-    background: url("../img/homePageImg.png") center top no-repeat;
-    background-size: cover;
-    overflow: hidden;
-    /* margin-bottom: 30px; */
-}
-
-#curtain {
-    width: 100%;
-    /* min-height: calc(100vh - 84.391px); */
-    overflow: hidden;
-    background: transparent;
-}
-
-#curtain .leftc,
-#curtain .rightc {
-    position: absolute;
-    top: 0;
-    width: 50%;
-    /* min-height: calc(100vh - 84.391px); */
-    height: 100%;
-    filter: brightness(180%);
-    background-image: url("../img/curtain.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#curtain .leftc {
-    left: 0;
-    transform-origin: top right;
-}
-
-#curtain .rightc {
-    left: 50%;
-    transform-origin: top left;
-}
-
-
-/* **********
-  opening
-********** */
-
-
-/*#scene.expand {
-  animation-name: expand-scene-horizontaly, expand-scene-verticaly;
-  animation-duration: 2.5s, 1.5s;
-  animation-timing-function: ease-in-out, ease-in-out;
-  animation-delay: 0s, 2.5s;
-  animation-iteration-count: 1, 1;
-  animation-direction: normal, normal;
-}*/
-
-#curtain.open .leftc,
-#curtain.open .rightc {
-    filter: brightness(100%);
-}
-
-#curtain.open .leftc {
-    animation-fill-mode: forwards;
-    animation-name: curtain-opening, left-curtain-opening;
-    animation-duration: 0s, 3s;
-    animation-timing-function: ease-in-out, ease-in-out;
-    animation-delay: 0s, 0s;
-    animation-iteration-count: 1, 1;
-    animation-direction: normal, normal;
-}
-
-#curtain.open .rightc {
-    animation-fill-mode: forwards;
-    animation-name: curtain-opening, right-curtain-opening;
-    animation-duration: 0s, 3s;
-    animation-timing-function: ease-in-out, ease-in-out;
-    animation-delay: 0s, 0s;
-    animation-iteration-count: 1, 1;
-    animation-direction: normal, normal;
-}
-
-
-/* **********
-  animations
-********** */
-
-@keyframes curtain-opening {
-    /* 2s */
-    from {
-        filter: brightness(180%);
-    }
-    to {
-        filter: brightness(100%);
-    }
-}
-
-@keyframes left-curtain-opening {
-    /* 4s */
-    from {
-        transform: translate(0) rotate(0) scale(1, 1);
-    }
-    to {
-        transform: translate(-100%) rotate(2deg) scale(0, 1);
-    }
-}
-
-@keyframes right-curtain-opening {
-    /* 4s */
-    from {
-        transform: translate(0) rotate(0) scale(1, 1);
-    }
-    to {
-        transform: translate(100%) rotate(-2deg) scale(0, 1);
-    }
-}
-
-
-/*////////////////////////////////////////////////////////////*/
-
-
 /*** Fancy Box ***/
 
 a[data-fancybox] img {
@@ -395,100 +226,6 @@ a[data-fancybox] img {
     justify-content: center;
     font-weight: normal;
     border-radius: 50px;
-}
-
-
-/*** curtain animation ***/
-
-.curtain {
-    margin: 0 auto;
-    width: 100%;
-    height: 85vh;
-    overflow: hidden;
-}
-
-.curtain__wrapper {
-    width: 100%;
-    height: 100%;
-}
-
-.curtain__wrapper input[type="checkbox"] {
-    position: absolute;
-    cursor: pointer;
-    width: 100%;
-    height: 100%;
-    z-index: 100;
-    opacity: 0;
-    top: 0;
-    left: 0;
-}
-
-.curtain__wrapper input[type="checkbox"]:checked~div.curtain__panel--left {
-    transform: translateX(0);
-}
-
-.curtain__wrapper input[type="checkbox"]:checked~div.curtain__panel--right {
-    transform: translateX(0);
-}
-
-.curtain__panel-left {
-    display: flex;
-    align-items: center;
-    background-image: url("../img/sample-1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #fff;
-    float: left;
-    position: relative;
-    width: 50%;
-    height: 85vh;
-    transition: all 1.8s ease-out;
-    z-index: 2;
-}
-
-.curtain__panel-right {
-    display: flex;
-    align-items: center;
-    background-image: url("../img/sample-2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #fff;
-    float: right;
-    position: relative;
-    width: 50%;
-    height: 85vh;
-    transition: all 1.8s ease-out;
-    z-index: 2;
-}
-
-.curtain__panel--left {
-    justify-content: flex-end;
-    transform: translateX(-100%);
-}
-
-.curtain__panel--right {
-    justify-content: flex-start;
-    transform: translateX(100%);
-}
-
-.curtain__content {
-    align-items: center;
-    background: #333;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    height: 85vh;
-    justify-content: center;
-    padding: 1rem 0;
-    position: absolute;
-    text-align: center;
-    z-index: 1;
-    width: 100%;
-}
-
-.curtain__content img {
-    width: 100%;
-    height: 85vh;
 }
 
 
@@ -726,7 +463,7 @@ h6,
     height: 10px;
     top: 0;
     left: 0;
-    background: url("../img/bg-header-top.png") center center repeat-x;
+    background: url(../img/bg-header-top.png) center center repeat-x;
     z-index: 1;
 }
 
@@ -735,7 +472,7 @@ h6,
     height: 19px;
     top: auto;
     bottom: 0;
-    background: url("../img/bg-header-bottom.png") center center repeat-x;
+    background: url(../img/bg-header-bottom.png) center center repeat-x;
 }
 
 @media (max-width: 768px) {
@@ -1209,9 +946,6 @@ h6,
         -ms-flex: 100%;
         flex: 100%;
         max-width: 100%;
-    }
-    #scene {
-        height: 42vh;
     }
 }
 

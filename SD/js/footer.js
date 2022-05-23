@@ -33,10 +33,10 @@ class FooterScripts extends HTMLElement {
         const script = document.createElement("script");
         script.type = "text/javascript";
         script.src = src;
-        if(data) {
+        if (data) {
             script.setAttribute("data-pdfjs-src", data);
         }
-        
+
         return script;
     }
 }

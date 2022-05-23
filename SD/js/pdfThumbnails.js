@@ -5,7 +5,7 @@
  * then convert it to base64,
  * then set it as the img src.
  */
-var createPDFThumbnails = function(){
+var createPDFThumbnails = function() {
 
     var worker = null;
     var loaded = false;
@@ -30,8 +30,7 @@ var createPDFThumbnails = function(){
         script.src = src;
         document.head.appendChild(script).onload = renderThumbnails;
         loaded = true;
-    }
-    else {
+    } else {
         renderThumbnails();
     }
 
@@ -49,16 +48,16 @@ var createPDFThumbnails = function(){
             var imgWidth = element.getAttribute('data-pdf-thumbnail-width');
             var imgHeight = element.getAttribute('data-pdf-thumbnail-height');
 
-            pdfjsLib.getDocument({url: filePath, worker: worker}).promise.then(function (pdf) {
-                pdf.getPage(1).then(function (page) {
+            pdfjsLib.getDocument({ url: filePath, worker: worker }).promise.then(function(pdf) {
+                pdf.getPage(1).then(function(page) {
                     var canvas = document.createElement("canvas");
-                    var viewport = page.getViewport({scale: 1.0});
+                    var viewport = page.getViewport({ scale: 1.0 });
                     var context = canvas.getContext('2d');
 
                     if (imgWidth) {
-                        viewport = page.getViewport({scale: imgWidth / viewport.width});
+                        viewport = page.getViewport({ scale: imgWidth / viewport.width });
                     } else if (imgHeight) {
-                        viewport = page.getViewport({scale: imgHeight / viewport.height});
+                        viewport = page.getViewport({ scale: imgHeight / viewport.height });
                     }
 
                     canvas.height = viewport.height;
@@ -67,7 +66,7 @@ var createPDFThumbnails = function(){
                     page.render({
                         canvasContext: context,
                         viewport: viewport
-                    }).promise.then(function () {
+                    }).promise.then(function() {
                         element.src = canvas.toDataURL();
                     });
                 }).catch(function() {
